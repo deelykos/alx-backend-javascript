@@ -5,7 +5,7 @@ import iterateThroughObject from './101-iterateThroughObject';
 
 const employees = {
   ...createEmployeesObject('engineering', ['Bob', 'Jane']),
-  ...createEmployeesObject('marketing', ['Sylvie'])
+  ...createEmployeesObject('marketing', ['Sylvie']),
 };
 
 const report = createReportObject(employees);
