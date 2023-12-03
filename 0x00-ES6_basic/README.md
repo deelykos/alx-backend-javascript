@@ -1,8 +1,6 @@
 # 0x00. ES6 Basics
 **`Javscript`** **`ES6`**
 
-![meme](./images/meme1.png)
-
 ## Resources
 **Read or watch:**
 
