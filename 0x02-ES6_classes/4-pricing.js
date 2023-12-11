@@ -12,7 +12,11 @@ class Pricing {
   }
 
   set amount(amount) {
-    if (typeof amount === 'number') this._amount = amount;
+    if (typeof amount === 'number') {
+      this._amount = amount;
+    } else {
+      throw new TypeError('Amount  must be a number');
+    }
   }
 
   get currency() {
@@ -20,7 +24,11 @@ class Pricing {
   }
 
   set currency(currency) {
-    if (currency instanceof Currency) this._currency = currency;
+    if (currency instanceof Currency) {
+      this._currency = currency;
+    } else {
+      throw new TypeError('currency must be an instance of Currency');
+    }
   }
 
   displayFullPrice() {
@@ -28,6 +36,14 @@ class Pricing {
   }
 
   static convertPrice(amount, conversionRate) {
+    if (typeof amount !== 'number') {
+      throw new TypeError('amount must be a number');
+    }
+
+    if (typeof conversionRate !== 'number') {
+      throw new TypeError('conversionRate must be a number');
+    }
+
     return amount * conversionRate;
   }
 }
