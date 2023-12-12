@@ -1,9 +1,9 @@
 /* eslint-disable no-underscore-dangle */
-class Car {
+export default class Car {
   constructor(brand, motor, color) {
-    this._brand = brand;
-    this._motot = motor;
-    this._color = color;
+    this.brand = brand;
+    this.motor = motor;
+    this.color = color;
   }
 
   get brand() {
@@ -36,8 +36,7 @@ class Car {
 
   cloneCar() {
     const Species = this.constructor[Symbol.species];
+
     return new Species();
   }
 }
-
-export default Car;

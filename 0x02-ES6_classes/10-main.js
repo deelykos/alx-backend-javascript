@@ -1,4 +1,3 @@
-/* eslint-disable eqeqeq */
 import Car from './10-car';
 
 class TestCar extends Car {}
