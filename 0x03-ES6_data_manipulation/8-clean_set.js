@@ -2,7 +2,7 @@
 const cleanSet = (set, startString) => {
   const resultArray = [];
 
-  if (startString === '' || typeof startString !== 'string' || typeof set !== 'object') {
+  if (startString.length === 0 || typeof startString !== 'string' || typeof set !== 'object') {
     return '';
   }
 
