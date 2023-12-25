@@ -5,7 +5,7 @@ const cleanSet = (set, startString) => {
   if (typeof set !== 'object' || typeof startString !== 'string' || startString.length === 0) return '';
 
   for (const elem of set) {
-    if (elem.startsWith(startString)) {
+    if (typeof elem === 'string' && elem.startsWith(startString)) {
       const sliceStartWith = elem.slice(3);
       resultArray.push(sliceStartWith);
     }
